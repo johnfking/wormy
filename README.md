@@ -1,7 +1,7 @@
 # Wormy
 A Discord Bot designed for EVE Online wormhole announcements.
 
-# Setup
+# Configuration
 Insure you update the TOKEN field in the .env file with your registered bot.
 
 # Usage
