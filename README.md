@@ -5,7 +5,7 @@ A Discord Bot designed for EVE Online wormhole announcements.
 Insure you update the TOKEN field in the .env file with your registered bot.
 
 # Usage
-EVE Online Wormholes have an ID which consists of a Letter/Number combination such as X003 or N432.
+EVE Online Wormholes have an ID which consists of a Letter/Number combination such as X003 or N432.  Don't confuse the Wormhole ID with the Sig ID found in the overview.
 
 Wormy was designed to look up wormholes statisics (how much mass and how large ships can pass) and then annouce it in Discord for your Corp.
 
