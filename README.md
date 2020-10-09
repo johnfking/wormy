@@ -1,2 +1,2 @@
-# wormy
-Discord Bot designed for EVE Online Wormhole announcements
+# Wormy
+A Discord Bot designed for EVE Online wormhole announcements.
