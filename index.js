@@ -109,10 +109,11 @@ function formatCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-function numberOfTrips(max, inv, shiph, shipc) {
-
-  if( inv < 122000000 ) return "Unable to use the Sigil.  Use something else and do math.";
-  
+function calcNumberOfTrips(max, inv, shiph, shipc) {
+  if( inv < 122000000 ) {
+	  return "Unable to use the Sigil.  Must use something with less mass and manually calculate trips.";
+  }
+ 
   let quotient = Math.floor(max/shiph);
   let remainder = max % shiph;
 
@@ -147,17 +148,19 @@ bot.on('message', message => {
     
   const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#f27c8a')
-	
 	.addField('Wormhole Type', WH_Data[wormhole][0], true)
-  .addField('Mass Total Allowed (Kg)', formatCommas( WH_Data[wormhole][1] ), true)
-  .addField('Max Individual Mass (Kg)', formatCommas( WH_Data[wormhole][2] ), true)
-  .addField('Sigil Instructions', numberOfTrips(WH_Data[wormhole][1], WH_Data[wormhole][2], 122000000, 22000000))
+	.addField('Mass Total Allowed (Kg)', formatCommas( WH_Data[wormhole][1] ), true)
+  	.addField('Max Individual Mass (Kg)', formatCommas( WH_Data[wormhole][2] ), true)
+  	.addField('Sigil Instructions', calcNumberOfTrips(WH_Data[wormhole][1], WH_Data[wormhole][2], 122000000, 22000000))
  
   if(system) {
     exampleEmbed.setTitle('Attention: A Nasty Wormhole ' + wormhole + ' has been spotted in ' + system + '!')
   } else {
     exampleEmbed.setTitle('Nasty Wormhole ' + wormhole) 
   }
+	  
   message.channel.send(exampleEmbed);
+  
   }
+
 });
