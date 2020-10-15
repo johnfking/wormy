@@ -16,5 +16,7 @@ Insure you update the TOKEN field in the .env file with your registered bot.
 ## Example
 ```!wormy Q003 Jita```
 
+![Example Jira Wormhole](https://ibb.co/BB8NfN8)
+
 ```!wormy N432```
   
