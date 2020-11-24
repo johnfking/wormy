@@ -125,7 +125,7 @@ function calcNumberOfTrips(max, inv, shiph, shipc) {
 }
 
 bot.on('ready', () => {
-  bot.user.setActivity('Living the thug SLYCE life!');
+  bot.user.setActivity('the thug SLYCE life!');
   console.info(`Logged in as ${bot.user.tag}!`);
 });
 
